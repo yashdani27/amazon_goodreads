@@ -1,0 +1,8 @@
+Web Scraping best practices
+1. Use custom headers
+    Keep rotating your list of UAs to avoid being detected by a service as a Webscraper
+2. Use proxies
+3. Avoid Honeypot traps
+
+General Python best practices
+use lowercase with under
