@@ -17,10 +17,6 @@ def prepare_url_amazon(dict_book_details):
     return f'https://www.amazon.in/s?k=' + dict_book_details['book'] + ' book'
 
 
-def prepare_url_goodreads(dict_book_details):
-    return f'https://www.goodreads.com/search?q=' + dict_book_details['book'] + ' ' + dict_book_details['author']
-
-
 def get_amazon_html():
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 "
@@ -77,6 +73,10 @@ def get_data_from_amazon_html(response):
                     dictionary[Constants.PRIME] = 'yes'
                 relevant_matches.append(dictionary)
     return relevant_matches
+
+
+def prepare_url_goodreads(dict_book_details):
+    return f'https://www.goodreads.com/search?q=' + dict_book_details['book'] + ' ' + dict_book_details['author']
 
 
 def get_goodreads_html():
